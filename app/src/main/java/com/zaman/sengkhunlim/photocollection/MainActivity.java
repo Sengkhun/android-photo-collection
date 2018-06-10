@@ -8,11 +8,6 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import java.io.IOException;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;

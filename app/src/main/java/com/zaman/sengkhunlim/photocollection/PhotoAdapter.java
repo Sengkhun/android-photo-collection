@@ -18,15 +18,16 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.PhotoViewHol
 
     public class PhotoViewHolder extends RecyclerView.ViewHolder {
 
-        TextView username, dateTaken;
+        TextView owner, dateTaken, description;
         ImageView thumbnail;
 
         PhotoViewHolder( View itemView ) {
             super(itemView);
 
-            this.username = itemView.findViewById( R.id.username );
+            this.owner = itemView.findViewById( R.id.owner );
             this.dateTaken = itemView.findViewById( R.id.date_taken );
             this.thumbnail = itemView.findViewById( R.id.thumbnail );
+            this.description = itemView.findViewById( R.id.description );
 
         }
 
@@ -54,8 +55,9 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.PhotoViewHol
 
         Photo currentPhoto = this.photos.get( position );
 
-        holder.username.setText( currentPhoto.getTitle() );
+        holder.owner.setText( currentPhoto.getOwner() );
         holder.dateTaken.setText( currentPhoto.getDatetaken() );
+        holder.description.setText( currentPhoto.getTitle() );
 
         // Image
         SimpleDraweeView image = (SimpleDraweeView) holder.thumbnail;
